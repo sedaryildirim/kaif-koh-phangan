@@ -7,14 +7,14 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({ 
-  title = "Kaif | Beachside Dining & Specialty Coffee Koh Phangan", 
-  description = "Experience modern beachside dining at Kaif in Chaloklum Bay. Serving Levantine soul food, specialty coffee, and fresh tropical flavors daily from 8am to 8pm."
+  title = "Kaif | Beachfront Cafe & Specialty Coffee Koh Phangan | Chaloklum Bay", 
+  description = "Discover Kaif, the premier beachfront cafe in Chaloklum Bay, Koh Phangan. Enjoy Levantine soul food, artisan specialty coffee, and healthy breakfast with stunning ocean views. Open daily 8am-8pm."
 }) => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Kaif",
-    "image": "https://images.unsplash.com/photo-1515276427842-f85802d514a2?auto=format&fit=crop&q=80&w=1920",
+    "image": "https://ais-dev-23e5ifgtmqmridnjyzqzl2-232259569789.asia-southeast1.run.app/kaif-hero-image.jpg",
     "@id": "https://kaif-kohphangan.com",
     "url": "https://kaif-kohphangan.com",
     "telephone": "+66XXXXXXXXX",
@@ -45,18 +45,25 @@ export const SEO: React.FC<SEOProps> = ({
       "opens": "08:00",
       "closes": "20:00"
     },
-    "servesCuisine": ["Levantine", "Middle Eastern", "International", "Healthy"],
+    "servesCuisine": ["Levantine", "Middle Eastern", "International", "Healthy", "Specialty Coffee"],
     "priceRange": "$$"
   };
+
+  const keywords = "Koh Phangan, Chaloklum Bay, beachside cafe, beachfront restaurant, specialty coffee, Levantine food, Middle Eastern cuisine, healthy breakfast, brunch Koh Phangan, ocean view dining, shakshuka, cold brew coffee, island cafe Koh Phangan, best coffee Chaloklum";
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content="/kaif-hero-image.jpg" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="/kaif-hero-image.jpg" />
       <script type="application/ld+json">
         {JSON.stringify(schemaData)}
       </script>

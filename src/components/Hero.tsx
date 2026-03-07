@@ -1,15 +1,27 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { Clock, MapPin, ChevronRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section 
+      ref={containerRef}
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0 z-0">
-        <img 
+        <motion.img 
+          style={{ y }}
           src="/kaif-hero-image.jpg" 
           alt="Aerial view of Kaif Beachside Cafe at Chaloklum Bay" 
-          className="w-full h-full object-cover"
+          className="w-full h-[120%] object-cover absolute top-0 left-0"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-black/30" />
