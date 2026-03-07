@@ -46,6 +46,15 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick }) => {
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-[10px] uppercase tracking-[0.2em]">
         <span>© 2024 Kaif Koh Phangan. All rights reserved.</span>
         <div className="flex gap-8">
+          <a 
+            href="https://cdc-group-landing-page.pages.dev/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+            aria-label="Visit CDC Hospitality Group"
+          >
+            CDC Hospitality Group
+          </a>
           <button 
             onClick={onPrivacyClick} 
             className="hover:text-white transition-colors"
