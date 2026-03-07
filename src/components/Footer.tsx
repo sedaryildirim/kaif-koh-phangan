@@ -10,7 +10,11 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick }) => {
     <footer className="bg-kaif-ink text-white py-16 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
         <div className="space-y-6">
-          <h2 className="text-3xl font-serif font-bold tracking-widest uppercase">Kaif</h2>
+          <h2 className="text-3xl font-serif font-bold tracking-widest">
+            <span className="opacity-40 font-light mr-1">{"{"}</span>
+            Kaif
+            <span className="opacity-40 font-light ml-1">{"}"}</span>
+          </h2>
           <p className="text-white/50 text-sm leading-relaxed">
             Modern beachside dining in the heart of Chaloklum Bay. Fresh flavors, peaceful vibes.
           </p>

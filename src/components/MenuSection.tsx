@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { menuData } from '../data/menu';
@@ -80,36 +80,71 @@ export const MenuSection: React.FC = () => {
           </div>
         </div>
 
-        <motion.div 
-          key={`${activeTab}-${activeFilters.join(',')}`}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="grid md:grid-cols-2 gap-x-16 gap-y-10 text-left"
-        >
-          {filteredMenu.length > 0 ? (
-            filteredMenu.map((item, index) => (
-              <div key={index} className="group">
-                <div className="flex justify-between items-baseline mb-2">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-xl font-serif font-bold group-hover:text-kaif-blue transition-colors">{item.name}</h3>
-                    <div className="flex gap-1">
-                      {item.tags.includes('vegetarian') && <div className="w-2 h-2 rounded-full bg-green-500" title="Vegetarian" />}
-                      {item.tags.includes('vegan') && <div className="w-2 h-2 rounded-full bg-emerald-600" title="Vegan" />}
-                      {item.tags.includes('gluten-free') && <div className="w-2 h-2 rounded-full bg-amber-500" title="Gluten Free" />}
+        <div className="relative min-h-[400px]">
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={`${activeTab}-${activeFilters.join(',')}`}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.07,
+                    delayChildren: 0.1
+                  }
+                },
+                exit: { 
+                  opacity: 0,
+                  transition: { duration: 0.2 }
+                }
+              }}
+              className="grid md:grid-cols-2 gap-x-16 gap-y-10 text-left"
+            >
+              {filteredMenu.length > 0 ? (
+                filteredMenu.map((item, index) => (
+                  <motion.div 
+                    key={`${item.name}-${index}`} 
+                    variants={{
+                      hidden: { opacity: 0, y: 15 },
+                      visible: { 
+                        opacity: 1, 
+                        y: 0,
+                        transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }
+                      }
+                    }}
+                    className="group"
+                  >
+                    <div className="flex justify-between items-baseline mb-2">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-xl font-serif font-bold group-hover:text-kaif-blue transition-colors">{item.name}</h3>
+                        <div className="flex gap-1">
+                          {item.tags.includes('vegetarian') && <div className="w-2 h-2 rounded-full bg-green-500" title="Vegetarian" />}
+                          {item.tags.includes('vegan') && <div className="w-2 h-2 rounded-full bg-emerald-600" title="Vegan" />}
+                          {item.tags.includes('gluten-free') && <div className="w-2 h-2 rounded-full bg-amber-500" title="Gluten Free" />}
+                        </div>
+                      </div>
+                      <span className="text-kaif-blue font-medium whitespace-nowrap ml-4">{item.price} THB</span>
                     </div>
-                  </div>
-                  <span className="text-kaif-blue font-medium whitespace-nowrap ml-4">{item.price} THB</span>
-                </div>
-                <p className="text-kaif-ink/60 text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))
-          ) : (
-            <div className="col-span-full py-20 text-center text-kaif-ink/40 italic">
-              No items found matching your search or filters.
-            </div>
-          )}
-        </motion.div>
+                    <p className="text-kaif-ink/60 text-sm leading-relaxed">{item.description}</p>
+                  </motion.div>
+                ))
+              ) : (
+                <motion.div 
+                  key="no-results"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="col-span-full py-20 text-center text-kaif-ink/40 italic"
+                >
+                  No items found matching your search or filters.
+                </motion.div>
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </div>
         
         <div className="mt-16">
           <p className="text-kaif-ink/40 italic text-sm">

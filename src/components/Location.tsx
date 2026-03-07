@@ -1,10 +1,17 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { MapPin, Clock, ExternalLink } from 'lucide-react';
 
 export const Location: React.FC = () => {
   return (
     <section id="location" className="py-16 px-6 bg-kaif-sand">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+      >
         <div className="space-y-6">
           <div className="space-y-4">
             <span className="text-kaif-blue font-medium uppercase tracking-widest text-sm">Find Us</span>
@@ -47,7 +54,13 @@ export const Location: React.FC = () => {
           </div>
         </div>
 
-        <div className="h-[450px] rounded-2xl overflow-hidden shadow-xl relative">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="h-[450px] rounded-2xl overflow-hidden shadow-xl relative"
+        >
           <iframe 
             width="100%" 
             height="100%" 
@@ -64,8 +77,8 @@ export const Location: React.FC = () => {
             <p className="text-[10px] font-bold uppercase tracking-widest text-kaif-blue mb-1">Directly on the beach</p>
             <p className="text-xs text-kaif-ink font-medium">Look for the white umbrellas right next to the Chaloklum pier.</p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

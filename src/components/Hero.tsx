@@ -27,10 +27,12 @@ export const Hero: React.FC = () => {
         <motion.h1 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-7xl md:text-9xl font-serif font-bold mb-8 tracking-tighter"
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="text-7xl md:text-9xl font-serif font-bold mb-8 tracking-tighter flex items-center justify-center"
         >
+          <span className="opacity-20 font-light mr-4 md:mr-8">{"{"}</span>
           KAIF
+          <span className="opacity-20 font-light ml-4 md:ml-8">{"}"}</span>
         </motion.h1>
         <motion.div 
           initial={{ opacity: 0 }}

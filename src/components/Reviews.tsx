@@ -15,14 +15,28 @@ export const Reviews: React.FC = () => {
         <span className="text-white/60 font-medium uppercase tracking-widest text-sm">Testimonials</span>
         <h2 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-16">What Guests Say</h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {reviews.map((review, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+              }}
               className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 flex flex-col h-full"
             >
               <div className="flex justify-between items-start mb-4">
@@ -44,7 +58,7 @@ export const Reviews: React.FC = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

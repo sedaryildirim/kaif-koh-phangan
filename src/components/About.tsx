@@ -6,7 +6,13 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-24 px-6 bg-kaif-cream">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div className="relative">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative"
+        >
           <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" 
@@ -16,9 +22,15 @@ export const About: React.FC = () => {
               referrerPolicy="no-referrer"
             />
           </div>
-        </div>
+        </motion.div>
         
-        <div className="space-y-8">
+        <motion.div 
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-8"
+        >
           <div className="space-y-4">
             <span className="text-kaif-blue font-medium uppercase tracking-widest text-sm">Our Story</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
@@ -40,7 +52,11 @@ export const About: React.FC = () => {
 
           <div className="grid grid-cols-3 gap-4 pt-8">
             <motion.div 
-              whileHover={{ y: -5, backgroundColor: "rgba(184, 224, 210, 0.1)" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ y: -5, backgroundColor: "rgba(168, 198, 188, 0.1)" }}
               className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">100%</div>
@@ -48,7 +64,11 @@ export const About: React.FC = () => {
             </motion.div>
             
             <motion.div 
-              whileHover={{ y: -5, backgroundColor: "rgba(184, 224, 210, 0.1)" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              whileHover={{ y: -5, backgroundColor: "rgba(168, 198, 188, 0.1)" }}
               className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">7</div>
@@ -56,7 +76,11 @@ export const About: React.FC = () => {
             </motion.div>
             
             <motion.div 
-              whileHover={{ y: -5, backgroundColor: "rgba(184, 224, 210, 0.1)" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              whileHover={{ y: -5, backgroundColor: "rgba(168, 198, 188, 0.1)" }}
               className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center flex flex-col items-center justify-center"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">
@@ -65,7 +89,7 @@ export const About: React.FC = () => {
               <div className="text-[10px] uppercase tracking-widest font-bold text-kaif-ink/40 leading-tight">Made with love</div>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

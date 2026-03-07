@@ -5,11 +5,12 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
   
-  --color-kaif-cream: #FFFFFF;
-  --color-kaif-sand: #F5F5F0;
-  --color-kaif-sage: #B8E0D2;
-  --color-kaif-blue: #3B82A1;
-  --color-kaif-ink: #2D4F5E;
+  --color-kaif-cream: #F9F9F7;
+  --color-kaif-sand: #F2F2EB;
+  --color-kaif-sage: #A8C6BC;
+  --color-kaif-blue: #78A9C1;
+  --color-kaif-ink: #334155;
+  --color-kaif-teal: #5F8D8E;
 }
 
 @layer base {

@@ -37,8 +37,10 @@ export const Header: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <a href="/" className={cn("text-2xl font-serif font-bold tracking-widest uppercase transition-colors", scrolled ? "text-kaif-ink" : "text-white")}>
+            <a href="/" className={cn("text-2xl font-serif font-bold tracking-widest transition-colors", scrolled ? "text-kaif-ink" : "text-white")}>
+              <span className="opacity-40 font-light mr-1">{"{"}</span>
               Kaif
+              <span className="opacity-40 font-light ml-1">{"}"}</span>
             </a>
           </div>
 
@@ -47,12 +49,6 @@ export const Header: React.FC = () => {
             {navLinks.map(link => (
               <a key={link.href} href={link.href} className="hover:text-kaif-blue transition-colors">{link.label}</a>
             ))}
-            <button 
-              aria-label="Book a Table"
-              className="bg-kaif-blue text-white px-6 py-2 rounded-full hover:bg-kaif-blue/90 transition-all shadow-sm"
-            >
-              Book a Table
-            </button>
           </div>
 
           {/* Mobile Toggle */}
@@ -86,12 +82,6 @@ export const Header: React.FC = () => {
                 {link.label}
               </a>
             ))}
-            <button 
-              aria-label="Book a Table"
-              className="bg-kaif-blue text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs"
-            >
-              Book a Table
-            </button>
           </motion.div>
         )}
       </AnimatePresence>
