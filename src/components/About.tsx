@@ -15,7 +15,7 @@ export const About: React.FC = () => {
         >
           <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" 
+              src="/assets/images/kaif-interior-shot.jpg" 
               alt="Cozy and stylish interior of Kaif Cafe with ocean view" 
               className="w-full h-full object-cover"
               loading="lazy"
@@ -56,8 +56,14 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              whileHover={{ y: -5, backgroundColor: "rgba(168, 198, 188, 0.1)" }}
-              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center"
+              whileHover={{ 
+                y: -10, 
+                scale: 1.02,
+                backgroundColor: "rgba(168, 198, 188, 0.15)",
+                borderColor: "rgba(168, 198, 188, 0.4)",
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)"
+              }}
+              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center cursor-default"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">100%</div>
               <div className="text-[10px] uppercase tracking-widest font-bold text-kaif-ink/40 leading-tight">Made fresh daily</div>
@@ -68,8 +74,14 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              whileHover={{ y: -5, backgroundColor: "rgba(168, 198, 188, 0.1)" }}
-              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center"
+              whileHover={{ 
+                y: -10, 
+                scale: 1.02,
+                backgroundColor: "rgba(168, 198, 188, 0.15)",
+                borderColor: "rgba(168, 198, 188, 0.4)",
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)"
+              }}
+              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center cursor-default"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">7</div>
               <div className="text-[10px] uppercase tracking-widest font-bold text-kaif-ink/40 leading-tight">Days a week</div>
@@ -80,8 +92,14 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              whileHover={{ y: -5, backgroundColor: "rgba(168, 198, 188, 0.1)" }}
-              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center flex flex-col items-center justify-center"
+              whileHover={{ 
+                y: -10, 
+                scale: 1.02,
+                backgroundColor: "rgba(168, 198, 188, 0.15)",
+                borderColor: "rgba(168, 198, 188, 0.4)",
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)"
+              }}
+              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center flex flex-col items-center justify-center cursor-default"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">
                 <Heart size={24} fill="currentColor" className="text-kaif-blue" aria-hidden="true" />
