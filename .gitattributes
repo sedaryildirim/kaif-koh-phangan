@@ -1,0 +1,10 @@
+# Ensure image integrity by treating them as binary and preventing merge conflicts
+*.jpg binary
+*.png binary
+*.svg binary
+
+# Protect the specified folders by ensuring they are handled consistently
+/public/** binary
+/public/assets/** binary
+/public/assets/images/** binary
+/public/images/** binary
