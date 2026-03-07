@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/images/kaif-hero-image.jpg" 
+          src="/kaif-hero-image.jpg" 
           alt="Aerial view of Kaif Beachside Cafe at Chaloklum Bay" 
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
