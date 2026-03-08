@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <motion.img 
           style={{ y }}
-          src="/kaif-hero-image.jpg" 
+          src="/assets/images/kaif-hero-image.jpg" 
           alt="Aerial view of Kaif Beachside Cafe at Chaloklum Bay" 
           className="w-full h-[120%] object-cover absolute top-0 left-0"
           referrerPolicy="no-referrer"

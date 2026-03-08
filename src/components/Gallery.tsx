@@ -9,14 +9,14 @@ export const Gallery: React.FC = () => {
 
   return (
     <section id="gallery" className="py-24 px-6 bg-kaif-cream">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-kaif-blue font-medium uppercase tracking-widest text-sm">Visuals</span>
           <h2 className="text-3xl md:text-4xl font-serif font-bold mt-4">The Kaif Vibe</h2>
         </div>
         
-        <div className="columns-2 md:columns-3 gap-4 space-y-4">
-          {galleryImages.map((img, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {galleryImages.slice(0, 6).map((img, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -29,12 +29,12 @@ export const Gallery: React.FC = () => {
               }}
               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
               onClick={() => setIndex(i)}
-              className="break-inside-avoid relative overflow-hidden rounded-xl shadow-sm border border-kaif-ink/5 cursor-zoom-in group"
+              className="relative overflow-hidden rounded-2xl shadow-sm border border-kaif-ink/5 cursor-zoom-in group aspect-[4/3]"
             >
               <img 
                 src={img.url} 
                 alt={img.alt} 
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
                 referrerPolicy="no-referrer"
               />

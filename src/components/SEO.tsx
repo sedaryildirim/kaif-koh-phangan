@@ -14,7 +14,7 @@ export const SEO: React.FC<SEOProps> = ({
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Kaif",
-    "image": "https://ais-dev-23e5ifgtmqmridnjyzqzl2-232259569789.asia-southeast1.run.app/kaif-hero-image.jpg",
+    "image": "https://ais-dev-23e5ifgtmqmridnjyzqzl2-232259569789.asia-southeast1.run.app/assets/images/kaif-hero-image.jpg",
     "@id": "https://kaif-kohphangan.com",
     "url": "https://kaif-kohphangan.com",
     "telephone": "+66XXXXXXXXX",
@@ -58,12 +58,12 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="/kaif-hero-image.jpg" />
+      <meta property="og:image" content="/assets/images/kaif-hero-image.jpg" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="/kaif-hero-image.jpg" />
+      <meta name="twitter:image" content="/assets/images/kaif-hero-image.jpg" />
       <script type="application/ld+json">
         {JSON.stringify(schemaData)}
       </script>

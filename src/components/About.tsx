@@ -15,7 +15,7 @@ export const About: React.FC = () => {
         >
           <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="/kaif-interior-shot.jpg" 
+              src="/assets/images/kaif-interior-shot.jpg" 
               alt="Cozy and stylish interior of Kaif Cafe with ocean view" 
               className="w-full h-full object-cover"
               loading="lazy"
