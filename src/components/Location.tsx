@@ -1,8 +1,19 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Clock, ExternalLink } from 'lucide-react';
+import { MapPin, Clock, ExternalLink, Copy } from 'lucide-react';
+import { toast } from 'sonner';
 
 export const Location: React.FC = () => {
+  const address = "Chaloklum Bay, Koh Phangan, Surat Thani 84280, Thailand";
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(address);
+    toast.success('Address copied to clipboard', {
+      description: 'You can now paste it into your maps app.',
+      duration: 3000,
+    });
+  };
+
   return (
     <section id="location" className="py-16 px-6 bg-kaif-sand">
       <motion.div 
@@ -19,13 +30,22 @@ export const Location: React.FC = () => {
           </div>
           
           <div className="space-y-4">
-            <div className="flex gap-4">
+            <div className="flex gap-4 group">
               <div className="w-10 h-10 rounded-full bg-kaif-blue/10 flex items-center justify-center text-kaif-blue shrink-0">
                 <MapPin size={20} aria-hidden="true" />
               </div>
-              <div>
-                <h4 className="font-bold uppercase tracking-widest text-[10px] mb-1">Address</h4>
-                <p className="text-kaif-ink/70 text-sm">Chaloklum Bay, Koh Phangan, Surat Thani 84280, Thailand</p>
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <h4 className="font-bold uppercase tracking-widest text-[10px] mb-1">Address</h4>
+                  <button 
+                    onClick={copyToClipboard}
+                    className="text-[10px] uppercase tracking-widest font-bold text-kaif-blue hover:text-kaif-blue/70 transition-colors flex items-center gap-1 opacity-0 group-hover:opacity-100"
+                  >
+                    <Copy size={10} />
+                    Copy
+                  </button>
+                </div>
+                <p className="text-kaif-ink/70 text-sm">{address}</p>
               </div>
             </div>
             
@@ -40,7 +60,7 @@ export const Location: React.FC = () => {
             </div>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-4 flex flex-wrap gap-4">
             <a 
               href="https://share.google/1T5SlyruOXKairdIj" 
               target="_blank" 
