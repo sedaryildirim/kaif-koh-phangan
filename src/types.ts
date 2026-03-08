@@ -13,4 +13,4 @@ export interface Review {
   rating: number;
 }
 
-export type MenuTab = 'breakfast' | 'allDay' | 'drinks';
+export type MenuTab = 'breakfast' | 'allDay' | 'drinks' | 'extras';

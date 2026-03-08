@@ -34,7 +34,7 @@ export const About: React.FC = () => {
           <div className="space-y-4">
             <span className="text-kaif-blue font-medium uppercase tracking-widest text-sm">Our Story</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-              What is Kaïf?
+              What is {'{'} Kaïf {'}'}?
             </h2>
           </div>
           
@@ -55,15 +55,18 @@ export const About: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
               whileHover={{ 
-                y: -10, 
-                scale: 1.02,
-                backgroundColor: "rgba(168, 198, 188, 0.15)",
-                borderColor: "rgba(168, 198, 188, 0.4)",
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)"
+                y: -12, 
+                scale: 1.03,
+                backgroundColor: "rgba(168, 198, 188, 0.12)",
+                borderColor: "rgba(168, 198, 188, 0.35)",
+                boxShadow: "0 25px 30px -5px rgba(0, 0, 0, 0.08)"
               }}
-              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center cursor-default"
+              transition={{ 
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm text-center cursor-default"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">100%</div>
               <div className="text-[10px] uppercase tracking-widest font-bold text-kaif-ink/40 leading-tight">Made fresh daily</div>
@@ -73,15 +76,18 @@ export const About: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
               whileHover={{ 
-                y: -10, 
-                scale: 1.02,
-                backgroundColor: "rgba(168, 198, 188, 0.15)",
-                borderColor: "rgba(168, 198, 188, 0.4)",
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)"
+                y: -12, 
+                scale: 1.03,
+                backgroundColor: "rgba(168, 198, 188, 0.12)",
+                borderColor: "rgba(168, 198, 188, 0.35)",
+                boxShadow: "0 25px 30px -5px rgba(0, 0, 0, 0.08)"
               }}
-              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center cursor-default"
+              transition={{ 
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm text-center cursor-default"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">7</div>
               <div className="text-[10px] uppercase tracking-widest font-bold text-kaif-ink/40 leading-tight">Days a week</div>
@@ -91,15 +97,18 @@ export const About: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
               whileHover={{ 
-                y: -10, 
-                scale: 1.02,
-                backgroundColor: "rgba(168, 198, 188, 0.15)",
-                borderColor: "rgba(168, 198, 188, 0.4)",
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)"
+                y: -12, 
+                scale: 1.03,
+                backgroundColor: "rgba(168, 198, 188, 0.12)",
+                borderColor: "rgba(168, 198, 188, 0.35)",
+                boxShadow: "0 25px 30px -5px rgba(0, 0, 0, 0.08)"
               }}
-              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm transition-all text-center flex flex-col items-center justify-center cursor-default"
+              transition={{ 
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              className="p-6 rounded-2xl border border-kaif-ink/5 bg-white shadow-sm flex flex-col items-center justify-center cursor-default"
             >
               <div className="text-3xl font-serif font-bold text-kaif-blue mb-1">
                 <Heart size={24} fill="currentColor" className="text-kaif-blue" aria-hidden="true" />

@@ -30,6 +30,7 @@ export const MenuSection: React.FC = () => {
     { id: 'drinks', label: 'Drinks' },
     { id: 'breakfast', label: 'Breakfast' },
     { id: 'allDay', label: 'All Day' },
+    { id: 'extras', label: 'Extras' },
   ];
 
   const filters = [
