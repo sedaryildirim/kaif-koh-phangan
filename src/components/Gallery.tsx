@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
 import { galleryImages } from '../data/gallery';
 
 export const Gallery: React.FC = () => {
-  const [index, setIndex] = useState(-1);
-
   return (
     <section id="gallery" className="py-24 px-6 bg-kaif-cream">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-kaif-blue font-medium uppercase tracking-widest text-sm">Visuals</span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mt-4">The Kaif Vibe</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mt-4">The {'{'} Kaif {'}'} Vibe</h2>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -28,8 +24,7 @@ export const Gallery: React.FC = () => {
                 ease: [0.21, 0.47, 0.32, 0.98]
               }}
               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-              onClick={() => setIndex(i)}
-              className="relative overflow-hidden rounded-2xl shadow-sm border border-kaif-ink/5 cursor-zoom-in group aspect-[4/3]"
+              className="relative overflow-hidden rounded-2xl shadow-sm border border-kaif-ink/5 group aspect-[4/3]"
             >
               <img 
                 src={img.url} 
@@ -43,13 +38,6 @@ export const Gallery: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <Lightbox
-        index={index}
-        open={index >= 0}
-        close={() => setIndex(-1)}
-        slides={galleryImages.map(img => ({ src: img.url, alt: img.alt }))}
-      />
     </section>
   );
 };

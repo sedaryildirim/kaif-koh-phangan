@@ -34,19 +34,19 @@ export const About: React.FC = () => {
           <div className="space-y-4">
             <span className="text-kaif-blue font-medium uppercase tracking-widest text-sm">Our Story</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-              What is {'{'} Kaïf {'}'}?
+              What is {'{'} Kaif {'}'}?
             </h2>
           </div>
           
           <div className="space-y-6 text-lg text-kaif-ink/70 leading-relaxed">
             <p>
-              Kaïf is a word that transcends language — borrowed from Arabic, embraced across cultures, it describes that perfect state of bliss. A feeling of deep pleasure, of being exactly where you're meant to be. That's what we set out to create on the shores of Koh Phangan.
+              Kaif is a word that transcends language — borrowed from Arabic, embraced across cultures, it describes that perfect state of bliss. A feeling of deep pleasure, of being exactly where you're meant to be. That's what we set out to create on the shores of Koh Phangan.
             </p>
             <p>
-              Born from a love of Middle Eastern flavours, fresh island ingredients, and the laid-back rhythm of Thai beach life, Kaïf is where Levantine soul food meets tropical paradise. Our kitchen serves up everything from shakshuka and freshly baked laffa to açaí bowls and cold brew — all made from scratch, every single day.
+              Born from a love of Middle Eastern flavours, fresh island ingredients, and the laid-back rhythm of Thai beach life, Kaif is where Levantine soul food meets tropical paradise. Our kitchen serves up everything from shakshuka and freshly baked laffa to açaí bowls and cold brew — all made from scratch, every single day.
             </p>
             <p>
-              Whether you're starting the morning with eggs benedict on the terrace, lingering over a long lunch with friends, or catching the sunset with a cocktail in hand — this is your place to slow down, eat well, and feel that kaïf.
+              Whether you're starting the morning with eggs benedict on the terrace, lingering over a long lunch with friends, or catching the sunset with a cocktail in hand — this is your place to slow down, eat well, and feel that kaif.
             </p>
           </div>
 

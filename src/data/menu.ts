@@ -17,8 +17,8 @@ export const menuData: Record<string, MenuItem[]> = {
     { name: "Shakshuka", description: "Poached eggs, bell pepper & tomato stew with tahini, coriander & harisa. Choose from toasted homemade folded laffa bread or sourdough", price: "290", tags: ["vegetarian"] },
     { name: "Levant Breakfast", description: "Babaganoush, harissa, israeli salad, boiled egg, emmental cheese, goat cheese, olives, hummus, tahini, curry dip, roasted pumpkin & laffa bread", price: "340", tags: ["vegetarian"] },
     { name: "Kaif Granola", description: "House granola with tropical fruit, yogurt and coconut", price: "250", tags: ["vegetarian"] },
-    { name: "Banana French Toast", description: "Thick cut, pan fried banana toast with brandy, vanilla, orange zest, blueberries, maple syrup & tropical fruits, served with whipped cream and pistachio", price: "290", tags: ["vegetarian"] },
     { name: "Acai Smoothie Bowl", description: "Acai, banana, mixed berries", price: "260", tags: ["vegan", "gluten-free"] },
+    { name: "Banana French Toast", description: "Thick cut, pan fried banana toast with brandy, vanilla, orange zest, blueberries, maple syrup & tropical fruits, served with whipped cream and pistachio", price: "290", tags: ["vegetarian"] },
   ],
   allDay: [
     { name: "Israeli Salad", description: "Tomato, cucumber, onion & mint, drizzled with lemon", price: "150", tags: ["vegan", "gluten-free"] },

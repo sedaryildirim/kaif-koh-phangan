@@ -40,11 +40,11 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-7xl md:text-9xl font-serif font-bold mb-8 tracking-tighter flex items-center justify-center"
+          className="text-7xl md:text-9xl font-serif font-bold mb-8 tracking-[0.15em] flex items-center justify-center"
         >
-          <span className="text-white font-light mr-4 md:mr-8">{"{"}</span>
+          <span className="text-white font-light mr-8 md:mr-16">{"{"}</span>
           KAIF
-          <span className="text-white font-light ml-4 md:ml-8">{"}"}</span>
+          <span className="text-white font-light ml-8 md:ml-16">{"}"}</span>
         </motion.h1>
         <motion.div 
           initial={{ opacity: 0 }}
@@ -69,20 +69,38 @@ export const Hero: React.FC = () => {
           transition={{ delay: 1 }}
           className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a 
+          <motion.a 
             href="#menu" 
-            className="inline-flex items-center gap-2 bg-white text-kaif-ink px-8 py-4 rounded-full font-medium hover:bg-kaif-sand transition-all group w-full sm:w-auto justify-center"
+            whileHover={{ y: -4, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            className="inline-flex items-center gap-2 bg-white text-kaif-ink px-8 py-4 rounded-full font-medium hover:bg-kaif-sand transition-colors group w-full sm:w-auto justify-center shadow-lg shadow-black/5"
           >
             Explore Menu
-            <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-          </a>
-          <a 
+            <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+          </motion.a>
+          <motion.a 
+            href="https://delivery-kpg.com/stores/kaif"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ y: -4, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            className="inline-flex items-center gap-2 bg-transparent border border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors w-full sm:w-auto justify-center"
+          >
+            Order Online
+            <ChevronRight size={18} aria-hidden="true" />
+          </motion.a>
+          <motion.a 
             href="#location" 
-            className="inline-flex items-center gap-2 bg-transparent border border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all w-full sm:w-auto justify-center"
+            whileHover={{ y: -4, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            className="inline-flex items-center gap-2 bg-transparent border border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors w-full sm:w-auto justify-center"
           >
             Find Us
             <MapPin size={18} aria-hidden="true" />
-          </a>
+          </motion.a>
         </motion.div>
       </div>
 

@@ -26,7 +26,7 @@ export const Location: React.FC = () => {
         <div className="space-y-6">
           <div className="space-y-4">
             <span className="text-kaif-blue font-medium uppercase tracking-widest text-sm">Find Us</span>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold">Visit Kaif</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold">Visit {'{'} Kaif {'}'}</h2>
           </div>
           
           <div className="space-y-4">

@@ -19,8 +19,8 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick }) => {
             Modern beachside dining in the heart of Chaloklum Bay. Fresh flavors, peaceful vibes.
           </p>
           <div className="flex gap-4">
-            <a href="#" aria-label="Follow Kaif on Instagram" className="hover:text-kaif-blue transition-colors"><Instagram size={20} /></a>
-            <a href="#" aria-label="Follow Kaif on Facebook" className="hover:text-kaif-blue transition-colors"><Facebook size={20} /></a>
+            <a href="https://www.instagram.com/kaifphangan/" target="_blank" rel="noopener noreferrer" aria-label="Follow Kaif on Instagram" className="hover:text-kaif-blue transition-colors"><Instagram size={20} /></a>
+            <a href="https://www.facebook.com/kaifphangan/" target="_blank" rel="noopener noreferrer" aria-label="Follow Kaif on Facebook" className="hover:text-kaif-blue transition-colors"><Facebook size={20} /></a>
           </div>
         </div>
         
@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick }) => {
             className="hover:text-white transition-colors"
             aria-label="View Privacy Policy"
           >
-            Privacy Policy
+            PRIVACY POLICY
           </button>
         </div>
       </div>
